@@ -1,0 +1,145 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+/* Canvas pour les étoiles */
+#starsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenu principal */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+/* Animation de la fusée */
+#rocket {
+    position: absolute;
+    top: 20%;
+    left: -150px;
+    width: 150px;
+    animation: flyRocket 5s linear infinite;
+    z-index: 5;
+    pointer-events: none;
+}
+
+@keyframes flyRocket {
+    0% { left: -150px; }
+    50% { left: 50%; }
+    100% { left: 100%; }
+}
+
+/* Titre */
+#companyName {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Slogan */
+#slogan {
+    font-size: 2rem;
+    color: #00ccff;
+    text-shadow: 0 0 10px rgba(0, 204, 255, 1), 0 0 20px rgba(0, 204, 255, 0.8);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Bouton */
+button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: white;
+    color: #00ccff;
+    border: 2px solid #00ccff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ccff;
+    color: white;
+}
+
+button:active {
+    background-color: #004e92;
+}
+
+/* Bannière Premium */
+#premiumBanner {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 2px solid #00ccff;
+    width: 250px;
+    display: none; /* Afficher seulement après simulation */
+}
+
+#premiumBanner p {
+    margin: 10px 0;
+}
+
+#toggleFeatures {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #00ccff;
+}
+
+/* Image de Mars */
+#marsImage {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 250px;  /* Taille intermédiaire */
+    max-width: 250px; /* Assure qu'elle ne dépasse pas */
+    height: auto;
+    transform: translateY(-50%);
+    display: none;  /* Ne s'affiche que quand la simulation démarre */
+}
+
+
+/* Image 360 cliquable */
+#image360 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: none;  /* Ne s'affiche que quand la simulation démarre */
+}
+
+#image360:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}

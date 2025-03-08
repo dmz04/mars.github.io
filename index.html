@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterMars Express Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <canvas id="starsCanvas"></canvas>
+        <div class="content">
+            <h1 id="companyName">InterMars Express</h1>
+            <p id="slogan">Faster than stars</p>
+            <button onclick="startSimulation()">Enter the simulation</button>
+        </div>
+        <img id="rocket" src="Rocket.png" alt="Rocket">
+    </div>
+
+    <!-- Premium Banner -->
+    <div id="premiumBanner" style="display: none;">
+        <p><strong>Premium</strong> - Exclusive Access</p>
+        <p id="premiumMessage">Mars is waiting for you!</p>
+        <button onclick="alert('Redirecting to payment page...')">Go to Premium</button>
+        
+        <div id="premiumFeatures" style="display: none;">
+            <p>🔥 Access the inside of the rocket</p>
+            <p>🔥 Special animations → Launch and landing on Mars</p>
+            <p>🔥 Interactive Restaurant & Duty-Free</p>
+        </div>
+        <span id="toggleFeatures" onclick="toggleFeatures()">▼</span>
+    </div>
+
+    <!-- Image de Mars -->
+    <img id="marsImage" src="mars.png" alt="Mars">
+
+    <!-- Image 360 cliquable -->
+    <a href="https://sketchfab.com/3d-models/aurora-spaceplane-05ed97e737c04e35a16640836b1592a6" target="_blank">
+        <img id="image360" src="360.png" alt="3D Mars Simulation">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
